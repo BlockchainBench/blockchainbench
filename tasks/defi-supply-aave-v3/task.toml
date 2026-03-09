@@ -1,0 +1,7 @@
+[task]
+name = "defi-supply-aave-v3"
+description = "Supply 10,000 USDC to Aave V3 Pool"
+difficulty = "easy"
+category = "defi"
+timeout = 300
+fork_block_number = 21000000

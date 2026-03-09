@@ -1,0 +1,7 @@
+[task]
+name = "defi-concentrated-lp-v3"
+description = "Create a concentrated liquidity position on Uniswap V3 for ETH/USDC"
+difficulty = "hard"
+category = "defi"
+timeout = 600
+fork_block_number = 21000000

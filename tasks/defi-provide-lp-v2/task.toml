@@ -1,0 +1,7 @@
+[task]
+name = "defi-provide-lp-v2"
+description = "Provide ETH/USDC liquidity on Uniswap V2"
+difficulty = "medium"
+category = "defi"
+timeout = 300
+fork_block_number = 21000000

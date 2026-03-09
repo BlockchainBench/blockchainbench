@@ -5,10 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "blockchainbench"
 version = "0.1.0"
-description = "Benchmark suite for evaluating AI agents on real DeFi tasks"
+description = "Open benchmark for evaluating AI agents on real DeFi tasks"
 readme = "README.md"
 license = "Apache-2.0"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "web3>=7.0",
     "tomli>=2.0",
@@ -22,9 +22,9 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tasks"]
+testpaths = ["tests"]
 python_files = ["test_*.py"]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 line-length = 100

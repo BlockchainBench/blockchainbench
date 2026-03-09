@@ -1,0 +1,7 @@
+[task]
+name = "defi-supply-borrow-aave"
+description = "Supply 50,000 USDC as collateral and borrow 0.5 WETH on Aave V3"
+difficulty = "medium"
+category = "defi"
+timeout = 300
+fork_block_number = 21000000

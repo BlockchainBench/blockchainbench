@@ -1,0 +1,7 @@
+[task]
+name = "defi-swap-multihop"
+description = "Multi-hop swap ETH -> WETH -> WBTC -> USDC via Uniswap V3 exactInput"
+difficulty = "medium"
+category = "defi"
+timeout = 300
+fork_block_number = 21000000

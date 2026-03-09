@@ -1,0 +1,7 @@
+[task]
+name = "defi-flash-loan-aave"
+description = "Execute a flash loan of 1,000,000 USDC on Aave V3"
+difficulty = "hard"
+category = "defi"
+timeout = 600
+fork_block_number = 21000000

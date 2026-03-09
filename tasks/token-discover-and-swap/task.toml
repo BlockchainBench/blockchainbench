@@ -1,0 +1,7 @@
+[task]
+name = "token-discover-and-swap"
+description = "Discover an unknown token and swap 1 ETH into it"
+difficulty = "hard"
+category = "token"
+timeout = 600
+fork_block_number = 21000000

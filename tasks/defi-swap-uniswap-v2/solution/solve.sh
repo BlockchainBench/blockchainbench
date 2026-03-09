@@ -1,0 +1,37 @@
+#!/bin/bash
+set -euo pipefail
+
+source /blockchainbench/shared/start-anvil.sh
+source /blockchainbench/shared/setup-wallet.sh
+
+# Addresses
+WALLET="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+WALLET_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+UNISWAP_V2_ROUTER="0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+WETH="0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+USDC="0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+RPC="http://localhost:8545"
+
+# Deadline far in the future (year 2100)
+DEADLINE=9999999999
+
+echo "=== Swapping 1 ETH for USDC via Uniswap V2 ==="
+
+cast send "$UNISWAP_V2_ROUTER" \
+    "swapExactETHForTokens(uint256,address[],address,uint256)" \
+    0 \
+    "[$WETH,$USDC]" \
+    "$WALLET" \
+    "$DEADLINE" \
+    --value 1ether \
+    --private-key "$WALLET_KEY" \
+    --rpc-url "$RPC"
+
+echo "=== Swap complete ==="
+
+# Verify
+USDC_BAL=$(cast call "$USDC" "balanceOf(address)(uint256)" "$WALLET" --rpc-url "$RPC")
+echo "USDC balance: $USDC_BAL"
+
+ETH_BAL=$(cast balance "$WALLET" --rpc-url "$RPC" --ether)
+echo "ETH balance: $ETH_BAL"

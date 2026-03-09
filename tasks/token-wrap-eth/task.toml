@@ -1,0 +1,7 @@
+[task]
+name = "token-wrap-eth"
+description = "Wrap 10 ETH into WETH"
+difficulty = "easy"
+category = "token"
+timeout = 300
+fork_block_number = 21000000

@@ -1,0 +1,7 @@
+[task]
+name = "defi-swap-uniswap-v2"
+description = "Swap 1 ETH for USDC via Uniswap V2 Router"
+difficulty = "easy"
+category = "defi"
+timeout = 300
+fork_block_number = 21000000
